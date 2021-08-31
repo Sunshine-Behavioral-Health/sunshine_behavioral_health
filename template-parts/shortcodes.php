@@ -717,16 +717,5 @@ function a_b_buttons()
 
 add_shortcode('a_b_buttons', 'a_b_buttons');
 
-function city_table()
-{
-	ob_start();
-	get_template_part('template-parts/content/shortcodes/city_table');
-	return ob_get_clean();
-}
-
-add_shortcode('city_table', 'city_table');
-
-
-
 
 
