@@ -16,7 +16,7 @@ $childrenPages = get_children()
 
 ?>
 <section class="get-other-children-in-table relative">
-    <img class="" src="<?= get_field('city_table--background-image')['url'] ?>" alt="">
+    <img class="" src="<?= get_field('get_other_children_in_table--background-image')['url'] ?>" alt="">
     <div class="absolute-top-left full-cover">
         <h2 class="color-white text-center">State Table Shortcode headline</h2>
         <div class="get-other-children-in-table--container m-r-20">
