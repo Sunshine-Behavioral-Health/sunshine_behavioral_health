@@ -40,7 +40,7 @@ if (is_home()) {
 <main id="primary" class="front_page">
 
 	<!-- HERO -->
-	<div class="hero_container row">
+	<div class="hero_container">
 		<img class="hide_on_mobile hide_on_tablet front_page_desktop_hero " src="<?php echo get_field('hero_image')['url'] ?>" alt="">
 		<img class="hide_on_desktop show_on_tablet front_page_mobile_hero" src="<?php echo get_field('hero_mobile_image')['url'] ?>" alt="">
 		<!-- Headline -->
@@ -79,12 +79,12 @@ if (is_home()) {
 	<!-- Healing Interjection -->
 	<section>
 		<div class="">
-			<div class="row healing_background" style="display:block;">
+			<div class="healing_background" style="display:block;">
 				<h2 class="section_headline healing_headline"><?php echo get_field('interjection_cta_one_headline') ?></h2>
 				<?php
 				$interjectionCTAOne = get_field('interjection_cta_button')
 				?>
-				<div class="cta_btn btn_mountain2 row interjection_cta"><a id="hpPhone" class="invocaNumber hpPhone" href="<?php echo $interjectionCTAOne['url'] ?>"><?php echo $interjectionCTAOne['title'] ?></a></div>
+				<div class="cta_btn btn_mountain2 interjection_cta"><a id="hpPhone" class="invocaNumber hpPhone" href="<?php echo $interjectionCTAOne['url'] ?>"><?php echo $interjectionCTAOne['title'] ?></a></div>
 			</div>
 		</div>
 	</section>
@@ -92,7 +92,7 @@ if (is_home()) {
 	<!-- Badges -->
 	<section>
 		<div class="">
-			<div class="row  badge_container">
+			<div class="badge_container">
 				<div class="badge_image">
 					<a title="Verify LegitScript Approval" class="legit_script_wrapper" href="https://legitscript.com/pharmacy/sunshinebehavioralhealth.com" rel="noopener noreferrer">
 						<img class="" loading="lazy" src="https://static.legitscript.com/seals/3380109.png" alt="LegitScript approved" width="140" height="100" border="0" />
@@ -157,9 +157,9 @@ if (is_home()) {
 
 	<!-- Treatment Cards -->
 	<section>
-		<div class="treatment_cards_container row ">
+		<div class="treatment_cards_container">
 			<h2 class="col-12"><?php echo get_field('inpatient_card_headline') ?></h2>
-			<div class="treatment_card_container row">
+			<div class="treatment_card_container">
 
 				<?php
 				if (have_rows('inpatient_cards')) :
@@ -172,7 +172,7 @@ if (is_home()) {
 							</a>
 							<p>______</p>
 							<p class="treatment_card_paragraph"><?php echo get_sub_field('card_content') ?></p>
-							<div class="row treatment_card_cta_wrapper"><a href="<?php echo get_sub_field('card_links')['url'] ?>">Learn More</a></div>
+							<div class="treatment_card_cta_wrapper"><a href="<?php echo get_sub_field('card_links')['url'] ?>">Learn More</a></div>
 						</div>
 				<?php
 					endwhile;
@@ -187,9 +187,9 @@ if (is_home()) {
 	<!-- Insurance Coverage Interjection -->
 	<section class="healing_section">
 		<div class="">
-			<div class="row  healing_background" style="display:block;">
+			<div class="healing_background" style="display:block;">
 				<h2 class="section_headline insurance_verification_headling"><?php echo get_field('interjection_cta_two_headline') ?></h2>
-				<div class="cta_btn btn_mountain2 row interjection_cta"><a href="<?php echo get_field('interjection_cta_two_button')['url'] ?>" class="hpInsurance"><?php echo get_field('interjection_cta_two_button')['title'] ?></a></div>
+				<div class="cta_btn btn_mountain2 interjection_cta"><a href="<?php echo get_field('interjection_cta_two_button')['url'] ?>" class="hpInsurance"><?php echo get_field('interjection_cta_two_button')['title'] ?></a></div>
 			</div>
 		</div>
 	</section>
@@ -210,7 +210,7 @@ if (is_home()) {
 					if (have_rows('addiction_treatment_column_one')) :
 						while (have_rows('addiction_treatment_column_one')) : the_row();
 					?>
-							<div class="row resource_content">
+							<div class="resource_content">
 								<h3><?php echo get_sub_field('headline') ?></h3>
 								<p><?php echo get_sub_field('content') ?></p>
 								<div class="resource_content_cta"><a href="<?php echo get_sub_field('link') ?>"><?php echo get_sub_field('link_text') ?></a></div>
@@ -226,7 +226,7 @@ if (is_home()) {
 					if (have_rows('addiction_treatment_column_two')) :
 						while (have_rows('addiction_treatment_column_two')) : the_row();
 					?>
-							<div class="row resource_content">
+							<div class="resource_content">
 								<h3><?php echo get_sub_field('headline') ?></h3>
 								<p><?php echo get_sub_field('content') ?></p>
 								<div class="resource_content_cta"><a href="<?php echo get_sub_field('link') ?>"><?php echo get_sub_field('link_text') ?></a></div>
@@ -247,7 +247,7 @@ if (is_home()) {
 	<!-- Blog Posts -->
 	<section class="blog_posts_section">
 
-		<div class=" row blog_container blog_bg" style="background-image: url(
+		<div class="blog_container blog_bg" style="background-image: url(
 			<?php
 			if (get_field('blog_background_image')) {
 				echo get_field('blog_background_image')['url'];
@@ -315,7 +315,7 @@ if (is_home()) {
 	<section class="substance_information_section">
 		<div class="substance_bg" style="background-image: url(<?php echo get_field('substance_abuse_background_image')['url'] ?>)">
 			<h2 class="substance_headline"><?php echo get_field('substance_abuse_information_headline'); ?></h2>
-			<div class=" row substance_info_width">
+			<div class="substance_info_width">
 				<?php
 				if (have_rows('substance_abuse_cards')) :
 					while (have_rows('substance_abuse_cards')) : the_row();
