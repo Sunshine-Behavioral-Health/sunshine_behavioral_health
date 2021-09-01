@@ -1,0 +1,30 @@
+.get-other-children-in-table {
+    overflow-y: hidden;
+    &--container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        max-height: 300px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 10px;
+            margin-right: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: var(--primary_color);
+        }
+        ul {
+            li {
+                list-style: none;
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

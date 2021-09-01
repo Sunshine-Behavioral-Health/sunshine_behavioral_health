@@ -717,5 +717,11 @@ function a_b_buttons()
 
 add_shortcode('a_b_buttons', 'a_b_buttons');
 
+function get_other_children_in_table()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/get_other_children_in_table');
+	return ob_get_clean();
+}
 
-
+add_shortcode('get_other_children_in_table', 'get_other_children_in_table');

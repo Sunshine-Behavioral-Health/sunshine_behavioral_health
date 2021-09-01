@@ -314,3 +314,19 @@ function wp_trim_excerpt_modified($text, $content_length = 55, $remove_breaks = 
 	}
 	return $text;
 }
+
+function pr($args)
+{
+  echo '<pre style="background:black;color:white;padding:1em;font-family:Courier;white-space:pre-wrap;">';
+  echo '<div style="color:lime;">Debug:</div>';
+  foreach (func_get_args() as $arg) {
+    echo '<div>' . print_r($arg, true) . '</div>';
+  }
+  echo '</pre>';
+}
+
+function dd($args)
+{
+  pr($args);
+  die;
+}

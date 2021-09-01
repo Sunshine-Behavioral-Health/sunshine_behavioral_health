@@ -15,6 +15,8 @@ This theme, like WordPress, is licensed under the GPL.
 */
 
 //Main
+@import "scss/variables";
+@import "scss/mixins";
 @import "scss/header";
 @import "scss/typography";
 @import "scss/front_page";
@@ -31,6 +33,8 @@ This theme, like WordPress, is licensed under the GPL.
 @import "scss/spacers";
 @import "scss/other";
 @import "scss/admin-bar";
+@import "scss/grids";
+@import "scss/helper";
 
 // Template Specific
 @import "scss/template_specific/activity";
@@ -94,6 +98,7 @@ This theme, like WordPress, is licensed under the GPL.
 @import "scss/shortcodes/facebook";
 @import "scss/shortcodes/all_centers";
 @import "scss/shortcodes/alumni_calendar";
+@import "scss/shortcodes/get_other_children_in_table";
 
 // Very bottom css for specificity reasons
 .dropdown_active {
