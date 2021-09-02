@@ -307,8 +307,12 @@ nav ul#primary-menu li ul li ul li a {
     width: 30%;
   }
 
-  nav ul li.four-columns ul li{
-    width: 23%
+  nav ul .four-columns ul li {
+    width: 23%;
+  }
+
+  nav ul .four-columns ul li ul li {
+    width: 100%;
   }
 
   nav ul li ul li ul li {

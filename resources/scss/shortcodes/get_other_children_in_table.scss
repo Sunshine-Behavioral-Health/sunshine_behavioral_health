@@ -1,5 +1,6 @@
 .get-other-children-in-table {
     overflow-y: hidden;
+    background: #e4eff7;
     &--container {
         display: flex;
         flex-direction: row;
@@ -8,6 +9,7 @@
         position: relative;
         max-height: 300px;
         overflow-y: auto;
+        overflow-x: hidden;
         &::-webkit-scrollbar {
             width: 10px;
             margin-right: 5px;
@@ -22,9 +24,14 @@
             li {
                 list-style: none;
                 a {
-                    color: $white;
+                    color: $secondaryColor;
                 }
             }
         }
+    }
+    svg{
+        position: absolute;
+        bottom: 0;
+        fill: $primaryColor;
     }
 }
