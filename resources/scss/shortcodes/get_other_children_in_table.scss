@@ -21,7 +21,13 @@
             background: var(--primary_color);
         }
         ul {
+            margin-bottom: 150px;
             li {
+                width: 30%;
+                border: 2px solid $secondaryColor;
+                @include mobile {
+                    width: 45%;
+                }
                 list-style: none;
                 a {
                     color: $secondaryColor;
@@ -29,9 +35,9 @@
             }
         }
     }
-    svg{
+    svg {
         position: absolute;
         bottom: 0;
-        fill: $primaryColor;
+        fill: $fourthColor;
     }
 }

@@ -19,9 +19,9 @@ $childrenPages = get_children()
     <div class="relative">
         <h2 class="color-secondary text-center">State Table Shortcode headline</h2>
         <div class="get-other-children-in-table--container m-r-20">
-            <ul class="row">
+            <ul class="flex flex-wrap space-around">
                 <?php foreach ($childrenPages as $page) : ?>
-                    <li class="col-xs-6 col-sm-4 col-md-3 m-t-10 m-b-5"><a class="color-secondary" href="<?= $page->guid ?>"><?= $page->post_title ?></a></li>
+                    <li class="m-5 flex justify-center"><a class="color-secondary" href="<?= $page->guid ?>"><?= $page->post_title ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
