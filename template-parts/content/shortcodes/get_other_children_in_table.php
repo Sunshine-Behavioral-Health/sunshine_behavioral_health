@@ -21,7 +21,7 @@ $childrenPages = get_children()
         <div class="get-other-children-in-table--container m-r-20">
             <ul class="flex flex-wrap space-around">
                 <?php foreach ($childrenPages as $page) : ?>
-                    <li class="m-5 flex justify-center"><a class="color-secondary" href="<?= $page->guid ?>"><?= $page->post_title ?></a></li>
+                    <li class="m-5 flex justify-center align-center"><a class="color-secondary" href="<?= $page->guid ?>"><?= $page->post_title ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
