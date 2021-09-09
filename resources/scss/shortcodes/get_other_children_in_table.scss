@@ -8,20 +8,21 @@
         justify-content: center;
         position: relative;
         max-height: 300px;
-        overflow-y: auto;
-        overflow-x: hidden;
-        &::-webkit-scrollbar {
-            width: 10px;
-            margin-right: 5px;
-        }
-        &::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        &::-webkit-scrollbar-thumb {
-            background: var(--primary_color);
-        }
+        // overflow-y: hidden;
+        // overflow-x: hidden;
         ul {
-            margin-bottom: 150px;
+            height: 50%;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                width: 10px;
+                margin-right: 5px;
+            }
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: var(--primary_color);
+            }
             li {
                 width: 30%;
                 border: 2px solid $secondaryColor;
