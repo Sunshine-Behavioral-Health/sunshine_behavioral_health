@@ -7,11 +7,11 @@
         flex-wrap: wrap;
         justify-content: center;
         position: relative;
-        max-height: 300px;
+        height: 300px;
         // overflow-y: hidden;
         // overflow-x: hidden;
         ul {
-            height: 50%;
+            height: 60%;
             overflow-y: auto;
             &::-webkit-scrollbar {
                 width: 10px;
