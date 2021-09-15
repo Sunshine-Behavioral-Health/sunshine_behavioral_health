@@ -13,6 +13,9 @@
         ul {
             height: 60%;
             overflow-y: auto;
+            @include mobile{
+                height: 70%;
+            }
             &::-webkit-scrollbar {
                 width: 10px;
                 margin-right: 5px;
