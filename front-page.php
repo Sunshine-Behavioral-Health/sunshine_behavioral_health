@@ -196,7 +196,7 @@ if (is_home()) {
 
 	<!-- Treatment Resources -->
 	<section>
-		<div class="treatment_resources_container ">
+		<div class="treatment_resources_container wrapper">
 			<div class="treatment_resources_container_headline">
 				<a href="<?php echo get_field('addiction_treatment_resources_link'); ?>">
 					<div class="icon_container"><img loading="lazy" src="<?php echo get_field('addiction_treatment_headline_icon')['url'] ?>"></div>
@@ -247,7 +247,7 @@ if (is_home()) {
 	<!-- Blog Posts -->
 	<section class="blog_posts_section">
 
-		<div class="blog_container blog_bg" style="background-image: url(
+		<div class="blog_container blog_bg flex flex-column" style="background-image: url(
 			<?php
 			if (get_field('blog_background_image')) {
 				echo get_field('blog_background_image')['url'];
@@ -257,7 +257,7 @@ if (is_home()) {
 
 
 			?>)">
-			<h2>OUR BLOG</h2>
+			<h2 class="text-center">OUR BLOG</h2>
 			<div class="blog_post_wrapper">
 				<ul>
 					<?php $posts_query = new \WP_Query('posts_per_page=3');

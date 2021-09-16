@@ -725,3 +725,13 @@ function get_other_children_in_table()
 }
 
 add_shortcode('get_other_children_in_table', 'get_other_children_in_table');
+
+
+function get_children_from_page()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/get_children_from_page');
+	return ob_get_clean();
+}
+
+add_shortcode('get_children_from_page', 'get_children_from_page');

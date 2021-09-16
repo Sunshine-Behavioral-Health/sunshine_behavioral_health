@@ -24,7 +24,7 @@
                 background: #f1f1f1;
             }
             &::-webkit-scrollbar-thumb {
-                background: var(--primary_color);
+                background: $primaryColor;
             }
             li {
                 width: 30%;
@@ -37,11 +37,12 @@
                     color: $secondaryColor;
                 }
             }
+            
         }
     }
     svg {
         position: absolute;
         bottom: 0;
-        fill: $fourthColor;
+        fill: $primaryColor;
     }
 }

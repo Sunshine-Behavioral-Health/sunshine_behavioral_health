@@ -7,7 +7,7 @@
 // ));
 
 $child_args = array(
-    'post_parent' => $post->post_parent,
+    'post_parent' => get_field('get_children_from_page--page'),
     'post_type'   => 'page',
     'post_status' => 'publish',
     'orderby' => 'title',
@@ -20,7 +20,7 @@ $childrenPages = get_children( $child_args );
 ?>
 <section class="get-other-children-in-table relative">
     <div class="relative">
-        <h2 class="color-secondary text-center"><?= get_field('get_other_children_in_table--headline') ?></h2>
+        <h2 class="color-secondary text-center"><?= get_field('get_children_from_page--headline') ?></h2>
         <div class="get-other-children-in-table--container m-r-20">
             <ul class="flex flex-wrap space-around">
                 <?php foreach ($childrenPages as $page) : ?>
