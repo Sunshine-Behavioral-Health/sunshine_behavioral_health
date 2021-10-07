@@ -31,6 +31,9 @@ namespace WP_Rig\WP_Rig;
 	<?php echo get_field('meta') ?>
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	
+	<!-- Top head scripts -->
+	<?= get_field('header_top_scripts', 'option') ?>
 
 	<!-- Google Data Layer -->
 	<?php get_template_part('template-parts/javascript/googleDataLayerJs'); ?>
@@ -51,7 +54,9 @@ namespace WP_Rig\WP_Rig;
 				j.src =
 					'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
 				f.parentNode.insertBefore(j, f);
-			})(window, document, 'script', 'dataLayer', 'GTM-5PQWDKH');
+			})(window, document, 'script', 'dataLayer', '<?= get_field('google_tag_manager_tracking_id', 'option') ?>');
+
+			
 		}, 1000);
 	</script>
 
@@ -74,14 +79,14 @@ namespace WP_Rig\WP_Rig;
 
 
 
-
+ 
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQWDKH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?= get_field('google_tag_manager_tracking_id', 'option') ?>" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
 

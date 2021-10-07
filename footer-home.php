@@ -21,13 +21,7 @@ namespace WP_Rig\WP_Rig;
     <?php get_template_part('template-parts/footer/footer_mobile_buttons'); ?>
 
 
-
-
-
-
-    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-
-    <!-- Invoca 4021290535 -->
+    <!-- Invoca -->
     <script>
         (function(i, n, v, o, c, a) {
             i.InvocaTagId = o;
@@ -37,7 +31,8 @@ namespace WP_Rig\WP_Rig;
             s.src = ('https:' === n.location.protocol ? 'https://' : 'http://') + v;
             var fs = n.getElementsByTagName('script')[0];
             fs.parentNode.insertBefore(s, fs);
-        })(window, document, 'solutions.invocacdn.com/js/pnapi_integration-latest.min.js', '1282/4021290535');
+        })(window, document, 'solutions.invocacdn.com/js/pnapi_integration-latest.min.js', '<?= get_field('invoca_tracking_id', 'option') ?>');
+        
     </script>
 </footer><!-- #colophon -->
 </div><!-- #page -->

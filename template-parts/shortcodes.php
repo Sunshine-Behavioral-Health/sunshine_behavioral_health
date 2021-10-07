@@ -735,3 +735,24 @@ function get_children_from_page()
 }
 
 add_shortcode('get_children_from_page', 'get_children_from_page');
+
+
+function content_with_border()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/content_with_border');
+	return ob_get_clean();
+}
+
+add_shortcode('content_with_border', 'content_with_border');
+
+function border_content_on_image_cta()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/border_content_on_image_cta');
+	return ob_get_clean();
+}
+
+add_shortcode('border_content_on_image_cta', 'border_content_on_image_cta');
+
+

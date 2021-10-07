@@ -14,7 +14,7 @@ $child_args = array(
     'order' => 'ASC'
 );
 
-$childrenPages = get_children( $child_args );
+$childrenPages = get_children($child_args);
 
 
 ?>
@@ -33,4 +33,3 @@ $childrenPages = get_children( $child_args );
         </svg>
     </div>
 </section>
-

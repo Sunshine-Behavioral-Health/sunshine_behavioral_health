@@ -209,8 +209,6 @@ $step: 5;
     color: #fff;
 }
 
-
-
 .color-black {
     color: #000;
 }
@@ -283,6 +281,23 @@ $step: 5;
     }
 }
 
-.max-content{
+.max-content {
     width: max-content;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+@include desktop {
+    .float-left-desktop-only {
+        float: left;
+    }
+    .float-right-desktop-only {
+        float: right;
+    }
 }
