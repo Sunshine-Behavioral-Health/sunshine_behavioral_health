@@ -28,9 +28,7 @@
   position: relative;
 }
 
-.author_and_medical_reviwer_sidebar_section
-  .medical_review_container
-  .medical_review_wrapper {
+.author_and_medical_reviwer_sidebar_section .medical_review_container .medical_review_wrapper {
   flex-wrap: nowrap;
 }
 
@@ -282,9 +280,6 @@
   .editor_and_review_section {
     flex-direction: column;
   }
-  .editor_meta_wrapper {
-    flex-direction: row;
-  }
   .medical_review_middle_spacer {
     display: none;
   }
@@ -329,16 +324,12 @@
   flex-direction: row;
 }
 
-.author_and_medical_reviewer_section
-  .medical_review_container
-  .medical_review_wrapper {
+.author_and_medical_reviewer_section .medical_review_container .medical_review_wrapper {
   padding: 0;
 }
 
 .author_and_medical_reviewer_section .editor_last_date .editor_last_date_span,
-.author_and_medical_reviewer_section
-  .editor_meta_name
-  .author_name_before_span {
+.author_and_medical_reviewer_section .editor_meta_name .author_name_before_span {
   color: #000;
   font-weight: 600;
 }
@@ -613,5 +604,34 @@
     border-radius: 99px;
     height: 115px;
     max-width: 125px;
+  }
+}
+
+div#medical_review_avatar_reference {
+  width: 120px;
+}
+
+@media screen and (max-width: 750px) {
+  .medical_review_wrapper {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  div#medical_review_avatar_reference {
+    display: none;
+  }
+
+  .editor_meta_wrapper {
+    align-content: space-evenly;
+  }
+
+  p.editor_meta_name {
+    padding-left: 10px;
+  }
+
+  .editor_container {
+    margin: auto;
+    display: center;
   }
 }

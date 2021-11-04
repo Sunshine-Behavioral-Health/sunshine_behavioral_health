@@ -4,16 +4,13 @@ get_template_part('template-parts/javascript/authorMedicalReviewJs');
 
 
 $medicalReviewUser = get_field("medical_review_user");
+
 $AuthorUser = get_field("editor_user");
-
-
 $AuthorMetaData = get_user_meta($AuthorUser['ID']);
-$medicalReviewerMetaData = get_user_meta($medicalReviewUser['ID']);
-
-
 $authorAvatar = get_field('profile_thumbnail', 'user_' . $AuthorUser['ID']);
-$medicalReviewAvatar = get_field('profile_thumbnail', 'user_' . $medicalReviewUser['ID']);
 
+$medicalReviewerMetaData = get_user_meta($medicalReviewUser['ID']);
+$medicalReviewAvatar = get_field('profile_thumbnail', 'user_' . $medicalReviewUser['ID']);
 $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
 ?>
 
@@ -34,7 +31,6 @@ $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
                     <a href="/contributors#<?php echo $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>" class="hide_on_desktop"><span class="author_name_span author_name_span_link"><?php echo $AuthorUser['display_name'] ?></span></a>
                 </p>
             </div>
-
         </div>
     </div>
 <?php endif; ?>
