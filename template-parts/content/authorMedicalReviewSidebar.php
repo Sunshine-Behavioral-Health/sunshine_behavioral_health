@@ -10,6 +10,7 @@ $authorAvatar = get_field('profile_thumbnail', 'user_' . $AuthorUser['ID']);
 $medicalReviewAvatar = get_field('profile_thumbnail', 'user_' . $medicalReviewUser['ID']);
 $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
 
+
 ?>
 <?php if ($AuthorUser) : ?>
     <section class="author_and_medical_reviewer_section author_and_medical_reviwer_sidebar_section hide_on_mobile">
@@ -20,16 +21,14 @@ $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
                         <img src="<?php echo $authorAvatar['url'] ?>" alt="" loading="lazy">
                     </div>
                     <div class="editor_meta_wrapper">
-                        <p class="editor_last_date"><span class="editor_last_date_span">Last Edited: </span><span class="editor_last_edit_date"><?php echo get_field('last_edited_date'); ?></span></p>
+                        <p class="editor_last_date"><span class="editor_last_date_span">Last Edited: </span><span class="editor_last_edit_date"><?= the_modified_date() ?></span></p>
                         <p class="editor_meta_name">
                             <span class="author_name_before_span">Author: </span>
                             <span class="author_name_span hide_on_mobile"><?php echo $AuthorUser['display_name'] ?></span>
                             <a href="/contributors#<?php echo $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>" class="hide_on_desktop"><span class="author_name_span author_name_span_link"><?php echo $AuthorUser['display_name'] ?></span></a>
-
                         </p>
                         <div class="editor_meta_bio_container hide hide_on_mobile">
                             <h6 class="">Meet <?php echo $AuthorUser['display_name'] ?></h6>
-
                             <div> <?php echo shorten_string($AuthorMetaData['description'][0], 30); ?>... <a href="/contributors#<?php echo $AuthorMetaData['first_name'][0] . '_' . $AuthorMetaData['last_name'][0] ?>"> Read More</a></div>
                         </div>
                     </div>

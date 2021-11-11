@@ -617,17 +617,13 @@ div#medical_review_avatar_reference {
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
   div#medical_review_avatar_reference {
     display: none;
   }
 
   .editor_meta_wrapper {
     align-content: space-evenly;
-  }
-
-  p.editor_meta_name {
-    padding-left: 10px;
   }
 
   .editor_container {

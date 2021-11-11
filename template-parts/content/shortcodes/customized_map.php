@@ -35,7 +35,7 @@ $centerSelection = get_field('customized_map_center_options');
                     <?php endif; ?>
                 </div>
                 <div class="customized_map_address_container" style="background-color:<?php echo "var(--lincoln_primary)"; ?>">
-                    <p>Address: <span>19067 W Frontage Rd, Raymond Il, 62560-5053L</span></p>
+                    <p>Address: <span>19067 W Frontage Rd, Raymond, IL 62560-505</span></p>
                 </div>
                 <div class="customized_map_body_wrapper">
                     <img class="customized_map_main_image" src="<?php echo get_template_directory_uri() . '/images/customized_map_body_lincoln.jpg' ?>" alt="">

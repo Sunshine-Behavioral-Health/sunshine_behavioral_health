@@ -369,6 +369,15 @@ function related_pages()
 
 add_shortcode('related_pages', 'related_pages');
 
+function related_pages_auto_siblings()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/related_pages_auto_siblings');
+	return ob_get_clean();
+}
+
+add_shortcode('related_pages_auto_siblings', 'related_pages_auto_siblings');
+
 
 
 function treatment_options()
