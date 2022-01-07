@@ -30,6 +30,9 @@
   margin: 0 20px 20px 20px;
   border: 2px solid var(--primary_color);
   width: 100%;
+  &.blue-box{
+    border-color: var(--secondary_color);
+  }
 }
 
 .orange_outline_boxes_shortcode_container

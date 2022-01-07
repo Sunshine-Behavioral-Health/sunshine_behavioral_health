@@ -11,7 +11,7 @@ $child_args = array(
 $sibling_pages = get_children( $child_args );
 
 if (!empty($sibling_pages)) : ?>
-    <section class="related_pages_section related_pages_section_nonsidebar">
+    <section class="related_pages_section related_pages_section_nonsidebar related_pages_sidebar_auto m-b-35">
         <div class="related_pages_headline">
             <h4><?php echo get_field('related_pages_title') ?></h4>
             <p><?php echo get_field('related_pages_subheadline') ?></p>

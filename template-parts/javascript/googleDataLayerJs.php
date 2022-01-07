@@ -13,10 +13,13 @@ $AuthorUser = get_field("editor_user");
     let pageURL = window.location.href;
     var dataLayer = window.dataLayer = window.dataLayer || [];
 
-    dataLayer.push({
+    setTimeout(() => {
+        dataLayer.push({
         'event': 'trackerReady',
         'client_id': googleCID,
         'pagePostAuthor': "<?php echo $AuthorUser['display_name']; ?>",
         'pageURL': pageURL
     });
+    }, 1000)
+    
 </script>

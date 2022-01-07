@@ -199,6 +199,13 @@
   color: var(--monarch_primary);
 }
 
+.lincoln_styles h2,
+.lincoln_styles h3,
+.lincoln_styles h4,
+.lincoln_styles h5 {
+  color: var(--lincoln_primary);
+}
+
 .mountain_styles h2,
 .mountain_styles h3,
 .mountain_styles h4,
@@ -342,10 +349,6 @@
   .center_page_expandable_row_container {
     flex-direction: row;
     justify-content: space-around;
-  }
-  .center_page_expandable_row_wrapper,
-  .center_page_expandable_row_container img {
-    width: 45%;
   }
   .center_page_insurance_form_container {
     display: flex;
@@ -600,4 +603,10 @@
   .center_page_insurance_form_wrapper form ul li {
     width: 45%;
   }
+}
+
+
+.center-page--illustration,
+.center-page--illustration img{
+  margin: 0 auto;
 }

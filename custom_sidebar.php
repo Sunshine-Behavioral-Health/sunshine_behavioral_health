@@ -25,18 +25,7 @@ get_template_part('template-parts/javascript/navigationJs');
 
 
 <main id="primary" class="">
-
-
-	<div class="hero_banner_container">
-		<img class="page_mobile_image hero_image hide_on_desktop hide_on_tablet" src="<?php echo get_field('mobile_image')['url']; ?>">
-		<div class="hero_banner_headlines_container">
-			<h1><?php echo get_field('page_headline') ?></h1>
-			<?php if (get_field('page_subheadline_paragraph')) : ?>
-				<p class="hero_subheadline"><?php echo get_field('page_subheadline_paragraph') ?></p>
-			<?php endif; ?>
-		</div>
-
-	</div>
+	<?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width'); ?>
 	<div class="page_grid">
 		<div class="page_wrapper">
 			<!-- Covid Notice -->

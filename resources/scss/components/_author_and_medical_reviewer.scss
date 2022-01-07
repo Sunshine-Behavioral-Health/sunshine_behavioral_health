@@ -631,3 +631,15 @@ div#medical_review_avatar_reference {
     display: center;
   }
 }
+
+@media screen and (max-width: 360px){
+  .medical_review_meta_wrapper{
+    &--date,
+    &--name{
+      display: flex;
+        .medical_review_meta_title{
+          margin-right: 10px;
+        }
+    }
+  }
+}

@@ -46,6 +46,12 @@
                                     <div class="center_page_location_address">
                                         <a href="https://www.google.com/maps/place/Willow+Springs+Recovery+-+Inpatient+Drug+and+Alcohol+Rehab,+Texas+Rehab,+Dual+Diagnosis+Treatment+Center/@30.151904,-97.227223,15z/data=!4m5!3m4!1s0x0:0x8ef094c9da9bd044!8m2!3d30.151904!4d-97.227223"><span>Address: </span>1128 TX-21, Bastrop, TX 78602</a>
                                     </div>
+                                <?php elseif ($centerValue == "Lincoln Recovery") : ?>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.315879491324!2d-89.64890148437571!3d39.28108633184049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8875a0e100a818d5%3A0xe326c41029e906f9!2s19067%20W%20Frontage%20Rd%2C%20Raymond%2C%20IL%2062560!5e0!3m2!1sen!2sus!4v1638847667684!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                                    <div class="center_page_location_address">
+                                        <a class="text-white" href="https://www.google.com/maps/search/19067+W+Frontage+Rd,+Raymond,+IL+62560-505/@39.2810822,-89.6489015,17z/data=!3m1!4b1"><span>Address: </span>19067 W Frontage Rd, Raymond, IL 62560-505</a>
+                                    </div>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -117,12 +123,23 @@
                             </div>
                         </div>
                         <div class="all_centers_accordion_row all_centers_accordion_row_cta">
-                            <a id="allCentersAccordionCTA" class="invocaNumber allCentersAccordionCTA" onclick="dataLayer.push({'event': 'phone_click', 'shortcode_type' : 'allCentersAccordionCTA'});" href="tel:949-276-2886">Call Today!</a>
+
+                            <?php
+                            $centerURL;
+                            if ($centerValue == "Chapters Capistrano") $centerURL = "/our-rehab-centers/chapters-capistrano/";
+                            elseif ($centerValue == "Lincoln Recovery") $centerURL = "/our-rehab-centers/lincoln-recovery/";
+                            elseif ($centerValue == "Monarch Shores") $centerURL = "/our-rehab-centers/monarch-shores/";
+                            elseif ($centerValue == "Mountain Springs") $centerURL = "/our-rehab-centers/mountain-springs-recovery/";
+                            elseif ($centerValue == "Willow Springs") $centerURL = "/our-rehab-centers/willow-springs-recovery/"; ?>
+
+                            <a href="<?php echo $centerURL ?>">Learn More</a>
+
                         </div>
-                <?php
+                    </div>
+            <?php
                 endwhile;
             endif;
-                ?>
-                    </div>
+            ?>
         </div>
+    </div>
 </section>

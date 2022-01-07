@@ -21,7 +21,7 @@ $medicalReviewMetaBio =  $medicalReviewerMetaData['description'][0];
                         <img src="<?php echo $authorAvatar['url'] ?>" alt="" loading="lazy">
                     </div>
                     <div class="editor_meta_wrapper">
-                        <p class="editor_last_date"><span class="editor_last_date_span">Last Edited: </span><span class="editor_last_edit_date"><?= the_modified_date() ?></span></p>
+                        <p class="editor_last_date"><span class="editor_last_date_span">Last Edited: </span><span class="editor_last_edit_date"><?= the_modified_date( 'm/d/Y' ) ?></span></p>
                         <p class="editor_meta_name">
                             <span class="author_name_before_span">Author: </span>
                             <span class="author_name_span hide_on_mobile"><?php echo $AuthorUser['display_name'] ?></span>

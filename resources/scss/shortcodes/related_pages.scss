@@ -103,3 +103,22 @@
   text-align: left;
   width: 100%;
 }
+
+.related_pages_sidebar_auto {
+  .related_pages_wrapper{
+    max-height: 394px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+      margin-right: 5px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary_color);
+    }
+  }
+}

@@ -57,12 +57,14 @@ $centerValue = get_field('center');
     <div class="content_container 
     <?php if ($centerValue == "Chapters Capistrano") echo "chapters_styles";
     elseif ($centerValue == "Monarch Shores") echo "monarch_styles";
+    elseif ($centerValue == "Lincoln Recovery") echo "lincoln_styles";
     elseif ($centerValue == "Mountain Springs") echo "mountain_styles";
     elseif ($centerValue == "Willow Springs") echo "willow_styles"; ?>">
         <section class="center_page_location_section">
             <div class="center_page_location_container">
                 <h2 style="color: var(--<?php if ($centerValue == "Chapters Capistrano") echo "chapters";
                                         elseif ($centerValue == "Monarch Shores") echo "monarch";
+                                        elseif ($centerValue == "Lincoln Recovery") echo "lincoln";
                                         elseif ($centerValue == "Mountain Springs") echo "mountain";
                                         elseif ($centerValue == "Willow Springs") echo "willow"; ?>_primary)"><?php echo get_field('center_page_-_location_headline') ?></h2>
                 <div class="center_page_location_wrapper">
@@ -81,6 +83,13 @@ $centerValue = get_field('center');
 
                             <div class="center_page_location_address" style="background-color: var(--monarch_primary);">
                                 <a href="https://www.google.com/maps/place/27123+Calle+Arroyo+%232121,+San+Juan+Capistrano,+CA+92675/@33.499647,-117.6580031,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcf1efd1bb11f7:0x521f70a0edb1c6b5!8m2!3d33.4996425!4d-117.6558144"><span>Address: </span>27123 Calle Arroyo #2121, San Juan Capistrano, CA 92675</a>
+                            </div>
+
+                        <?php elseif ($centerValue == "Lincoln Recovery") : ?>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.315879491324!2d-89.64890148437571!3d39.2810863318405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8875a0e100a818d5%3A0xe326c41029e906f9!2s19067%20W%20Frontage%20Rd%2C%20Raymond%2C%20IL%2062560!5e0!3m2!1sen!2sus!4v1638585332856!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                            <div class="center_page_location_address" style="background-color: var(--lincoln_primary);">
+                                <a href="https://www.google.com/maps/search/19067+W+Frontage+Rd,+Raymond,+IL+62560-505/@39.2810863,-89.6489015,17z/data=!3m1!4b1"><span>Address: </span>19067 W Frontage Rd, Raymond, IL 62560-505</a>
                             </div>
                         <?php elseif ($centerValue == "Mountain Springs") : ?>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3096.4226461415133!2d-104.86456988437968!3d39.09684684276736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876cade5e7b20a25%3A0x1e60b73ef75cbe49!2s1865%20Woodmoor%20Dr%2C%20Monument%2C%20CO%2080132!5e0!3m2!1sen!2sus!4v1619809190008!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -123,6 +132,7 @@ $centerValue = get_field('center');
                 <?php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
                 <a href="<?php echo $actual_link; ?>#center_insurance_form">Verify Insurance for <?php if ($centerValue == "Chapters Capistrano") echo "Chapters Capistrano";
                                                                                                     elseif ($centerValue == "Monarch Shores") echo "Monarch Shores";
+                                                                                                    elseif ($centerValue == "Lincoln Recovery") echo "Lincoln Recovery";
                                                                                                     elseif ($centerValue == "Mountain Springs") echo "Mountain Springs";
                                                                                                     elseif ($centerValue == "Willow Springs") echo "Willow Springs"; ?></a>
             </div>
@@ -147,47 +157,51 @@ $centerValue = get_field('center');
             </div>
         </section>
 
+        <?php if ($centerValue != "Lincoln Recovery") : ?>
+            <section class="center_page_testimonial_section">
+                <div class="center_page_badge_container p-20">
+                    <h3 class="text-center m-t-0 m-b-10">Our Accreditation</h3>
+                    <div class="ceneter_page_badges_wrapper">
+                        <?php if ($centerValue == "Chapters Capistrano") : ?>
+                            <a href="https://legitscript.com/pharmacy/chapterscapistrano.com" class="legit_script_wrapper" title="Verify LegitScript Approval">
+                                <img src="https://static.legitscript.com/seals/3380243.png" alt="LegitScript approved" loading="lazy" width="140" height="100" />
+                            </a>
+                            <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
+                        <?php elseif ($centerValue == "Monarch Shores") : ?>
+                            <a href="https://legitscript.com/pharmacy/monarchshores.com" class="legit_script_wrapper" title="Verify LegitScript Approval">
+                                <img src="https://static.legitscript.com/seals/3380081.png" alt="LegitScript approved" loading="lazy" width="140" height="100" />
+                            </a>
+                            <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
+                        <?php elseif ($centerValue == "Mountain Springs") : ?>
+                            <a href="https://www.legitscript.com/websites/mountainspringsrecovery.com/" class="legit_script_wrapper" title="Verify LegitScript Approval">
+                                <img src="https://static.legitscript.com/seals/4466021.png" alt="LegitScript approved" loading="lazy" />
+                            </a>
+                            <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
+                            <img src="<?php echo get_template_directory_uri() . '/images/colorado_springs_badge.png' ?>" alt="" loading="lazy">
 
-        <section class="center_page_testimonial_section">
-            <div class="center_page_badge_container p-20">
-                <h3 class="text-center m-t-0 m-b-10">Our Accreditation</h3>
-                <div class="ceneter_page_badges_wrapper">
-                    <?php if ($centerValue == "Chapters Capistrano") : ?>
-                        <a href="https://legitscript.com/pharmacy/chapterscapistrano.com" class="legit_script_wrapper" title="Verify LegitScript Approval">
-                            <img src="https://static.legitscript.com/seals/3380243.png" alt="LegitScript approved" loading="lazy" width="140" height="100" />
-                        </a>
-                        <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
-                    <?php elseif ($centerValue == "Monarch Shores") : ?>
-                        <a href="https://legitscript.com/pharmacy/monarchshores.com" class="legit_script_wrapper" title="Verify LegitScript Approval">
-                            <img src="https://static.legitscript.com/seals/3380081.png" alt="LegitScript approved" loading="lazy" width="140" height="100" />
-                        </a>
-                        <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
-                    <?php elseif ($centerValue == "Mountain Springs") : ?>
-                        <a href="https://www.legitscript.com/websites/mountainspringsrecovery.com/" class="legit_script_wrapper" title="Verify LegitScript Approval">
-                            <img src="https://static.legitscript.com/seals/4466021.png" alt="LegitScript approved" loading="lazy" />
-                        </a>
-                        <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
-                        <img src="<?php echo get_template_directory_uri() . '/images/colorado_springs_badge.png' ?>" alt="" loading="lazy">
-
-                    <?php elseif ($centerValue == "Willow Springs") : ?>
-                        <a href="https://legitscript.com/pharmacy/willowspringsrecovery.com/" class="legit_script_wrapper" title="Verify LegitScript Approval">
-                            <img src="https://static.legitscript.com/seals/3380258.png" alt="LegitScript approved" loading="lazy" width="140" height="100" />
-                        </a>
-                        <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
-                        <img src="<?php echo get_template_directory_uri() . '/images/austin_texas_badge.jpg' ?>" alt="" loading="lazy">
-                    <?php endif; ?>
+                        <?php elseif ($centerValue == "Willow Springs") : ?>
+                            <a href="https://legitscript.com/pharmacy/willowspringsrecovery.com/" class="legit_script_wrapper" title="Verify LegitScript Approval">
+                                <img src="https://static.legitscript.com/seals/3380258.png" alt="LegitScript approved" loading="lazy" width="140" height="100" />
+                            </a>
+                            <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
+                            <img src="<?php echo get_template_directory_uri() . '/images/austin_texas_badge.jpg' ?>" alt="" loading="lazy">
+                        <?php endif; ?>
+                    </div>
                 </div>
-            </div>
-            <div class="center_page_testimonial_container">
-                <p><?php echo get_field('center_page_testimonial') ?></p>
-                <p><?php echo get_field('center_page_testimonial_name') ?></p>
-                <img src="<?php echo get_template_directory_uri() . '/images/icons/five_stars.png' ?>" alt="" loading="lazy">
-            </div>
-        </section>
+
+                <?php if (!empty(get_field('center_page_testimonial'))) : ?>
+                    <div class="center_page_testimonial_container">
+                        <p><?php echo get_field('center_page_testimonial') ?></p>
+                        <p><?php echo get_field('center_page_testimonial_name') ?></p>
+                        <img src="<?php echo get_template_directory_uri() . '/images/icons/five_stars.png' ?>" alt="" loading="lazy">
+                    </div>
+                <?php endif; ?>
+            </section>
+        <?php endif; ?>
 
         <section class="center_page_expandable_row_section">
-            <div class="center_page_expandable_row_container">
-                <div class="center_page_expandable_row_wrapper">
+            <div class="center_page_expandable_row_container row">
+                <div class="center_page_expandable_row_wrapper col col-xs-12 col-sm-6">
                     <?php
                     if (have_rows('center_page_expandable_rows')) :
                         while (have_rows('center_page_expandable_rows')) : the_row();
@@ -202,14 +216,17 @@ $centerValue = get_field('center');
                                     <p><?php echo get_sub_field('content') ?></p>
                                     <p></p>
                                 </div>
-
                             </div>
                     <?php
                         endwhile;
                     endif;
                     ?>
                 </div>
-                <img src="<?php echo get_template_directory_uri() . '/images/chapters-min.jpg' ?>" alt="" loading="lazy">
+                <?php if (!empty(get_field('center_page_illustration')['url'])) : ?>
+                    <div class="flex justify-center align-center col col-xs-12 col-sm-6">
+                        <img src="<?= get_field('center_page_illustration')['url'] ?>" alt="<?= get_field('center_page_illustration')['alt'] ?>">
+                    </div>
+                <?php endif; ?>
             </div>
         </section>
 
@@ -220,6 +237,7 @@ $centerValue = get_field('center');
                         <?php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
                         <a href="<?php echo $actual_link; ?>#center_insurance_form">Verify Insurance for <?php if ($centerValue == "Chapters Capistrano") echo "Chapters Capistrano";
                                                                                                             elseif ($centerValue == "Monarch Shores") echo "Monarch Shores";
+                                                                                                            elseif ($centerValue == "Lincoln Recovery") echo "Lincoln Recovery";
                                                                                                             elseif ($centerValue == "Mountain Springs") echo "Mountain Springs";
                                                                                                             elseif ($centerValue == "Willow Springs") echo "Willow Springs"; ?></a>
                     </div>

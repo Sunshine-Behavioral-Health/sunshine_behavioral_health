@@ -463,6 +463,24 @@ function data_cards_shortcode()
 
 add_shortcode('data_cards_shortcode', 'data_cards_shortcode');
 
+function data_cards_shortcode_u1()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/data_cards_shortcode_u1');
+	return ob_get_clean();
+}
+
+add_shortcode('data_cards_shortcode_u1', 'data_cards_shortcode_u1');
+
+function data_cards_shortcode_u2()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/data_cards_shortcode_u2');
+	return ob_get_clean();
+}
+
+add_shortcode('data_cards_shortcode_u2', 'data_cards_shortcode_u2');
+
 
 function image_left_cta_right_shortcode_dynamic()
 {
@@ -541,6 +559,33 @@ function list_and_cta_shortcode()
 }
 
 add_shortcode('list_and_cta_shortcode', 'list_and_cta_shortcode');
+
+function list_and_cta_shortcode_u1()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/list_and_cta_shortcode_u1');
+	return ob_get_clean();
+}
+
+add_shortcode('list_and_cta_shortcode_u1', 'list_and_cta_shortcode_u1');
+
+function list_and_cta_shortcode_u2()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/list_and_cta_shortcode_u2');
+	return ob_get_clean();
+}
+
+add_shortcode('list_and_cta_shortcode_u2', 'list_and_cta_shortcode_u2');
+
+function list_and_cta_shortcode_u3()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/list_and_cta_shortcode_u3');
+	return ob_get_clean();
+}
+
+add_shortcode('list_and_cta_shortcode_u3', 'list_and_cta_shortcode_u3');
 
 
 
@@ -678,6 +723,42 @@ function orange_outline_boxes()
 }
 
 add_shortcode('orange_outline_boxes', 'orange_outline_boxes');
+
+function orange_outline_boxes_u1()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/orange_outline_boxes_u1');
+	return ob_get_clean();
+}
+
+add_shortcode('orange_outline_boxes_u1', 'orange_outline_boxes_u1');
+
+function orange_outline_boxes_u2()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/orange_outline_boxes_u2');
+	return ob_get_clean();
+}
+
+add_shortcode('orange_outline_boxes_u2', 'orange_outline_boxes_u2');
+
+function blue_outline_boxes_u1()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/blue_outline_boxes_u1');
+	return ob_get_clean();
+}
+
+add_shortcode('blue_outline_boxes_u1', 'blue_outline_boxes_u1');
+
+function blue_outline_boxes_u2()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/blue_outline_boxes_u2');
+	return ob_get_clean();
+}
+
+add_shortcode('blue_outline_boxes_u2', 'blue_outline_boxes_u2');
 
 function all_centers_accordion()
 {

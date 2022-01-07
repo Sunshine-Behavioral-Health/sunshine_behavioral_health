@@ -323,9 +323,28 @@ add_shortcode('button', function ($content) {
 //Add buttons to TinyMCE
 function add_style_select_button($buttons)
 {
-  //array_unshift($buttons, 'styleselect');    
-  array_unshift($buttons, 'fontsizeselect');
-  //array_unshift( $buttons, 'fontselect' );
-  return $buttons;
+	//array_unshift($buttons, 'styleselect');    
+	array_unshift($buttons, 'fontsizeselect');
+	//array_unshift( $buttons, 'fontselect' );
+	return $buttons;
 }
 add_filter('mce_buttons_2', 'add_style_select_button');
+
+/**
+ * converts ACF link array to pretty 
+ * @param ACF link array 
+ */
+function acf_link($link, $classes = '')
+{
+	if (empty($link['target'])) {
+		$target = '_self';
+	} else {
+		$target = $link['target'];
+	}
+	if (empty($link['title'])) {
+		$title = "Learn More";
+	} else {
+		$title = $link['title'];
+	}
+	return '<a class="' . $classes . '" target="' . $target . '" href="' . $link['url'] . '">' . $title . '</a>';
+}
