@@ -69,6 +69,8 @@ ul#primary-menu {
   justify-content: space-between;
   padding: 0;
   margin: 10px 0;
+  position: relative;
+  z-index: 99;
 }
 
 nav ul li {

@@ -24,7 +24,9 @@ $childrenPages = get_children($child_args);
         <div class="get-other-children-in-table--container m-r-20">
             <ul class="flex flex-wrap space-around">
                 <?php foreach ($childrenPages as $page) : ?>
-                    <li class="m-5 flex justify-center align-center"><a class="color-secondary text-center" href="<?= $page->guid ?>"><?= $page->post_title ?></a></li>
+                    <?php if (!empty($page)) : ?>
+                        <li class="m-5 flex justify-center align-center"><a class="color-secondary text-center flex justify-center align-center" href="<?= get_permalink($page->ID) ?>"><?= $page->post_title ?></a></li>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </ul>
         </div>

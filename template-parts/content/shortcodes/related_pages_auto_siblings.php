@@ -30,7 +30,7 @@ if (!empty($sibling_pages)) : ?>
             ?>
             <?php foreach ($sibling_pages as $page) : ?>
                 <div class="related_pages_element">
-                    <a class="color-secondary text-center" href="<?= $page->guid ?>"><?= $page->post_title ?></a>
+                    <a class="color-secondary text-center" href="<?= get_permalink($page->ID) ?>"><?= $page->post_title ?></a>
                 </div>
             <?php endforeach; ?>
         </div>

@@ -1,11 +1,5 @@
 <?php
 
-// $childrenPages = get_children(array(
-//     'post_parent' => $post->ID,
-//     'orderby' => 'title',
-//     'order' => 'ASC'
-// ));
-
 $child_args = array(
     'post_parent' => $post->post_parent,
     'post_type'   => 'page',
@@ -20,11 +14,11 @@ $childrenPages = get_children( $child_args );
 ?>
 <section class="get-other-children-in-table relative">
     <div class="relative">
-        <h2 class="color-secondary text-center"><?= get_field('get_other_children_in_table--headline') ?></h2>
+        <h2 class="color-secondary text-center"><?= get_field('get_children_from_page--headline') ?></h2>
         <div class="get-other-children-in-table--container m-r-20">
             <ul class="flex flex-wrap space-around">
                 <?php foreach ($childrenPages as $page) : ?>
-                    <?php if (!empty($page->ID)) : ?>
+                    <?php if (!empty($page)) : ?>
                         <li class="m-5 flex justify-center align-center"><a class="color-secondary text-center flex justify-center align-center" href="<?= get_permalink($page->ID) ?>"><?= $page->post_title ?></a></li>
                     <?php endif; ?>
                 <?php endforeach; ?>
@@ -35,4 +29,3 @@ $childrenPages = get_children( $child_args );
         </svg>
     </div>
 </section>
-

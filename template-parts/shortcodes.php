@@ -378,6 +378,15 @@ function related_pages_auto_siblings()
 
 add_shortcode('related_pages_auto_siblings', 'related_pages_auto_siblings');
 
+function get_siblings_in_list()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/get_siblings_in_list');
+	return ob_get_clean();
+}
+
+add_shortcode('get_siblings_in_list', 'get_siblings_in_list');
+
 
 
 function treatment_options()

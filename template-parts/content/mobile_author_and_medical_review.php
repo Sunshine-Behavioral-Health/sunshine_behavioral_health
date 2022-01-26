@@ -44,7 +44,7 @@ $medical_review_date = get_field('clinically_reviewed_date');
                     </div>
                     <div class="">
 
-                        <p class="mobile-author-and-review--date-title no-wrap">Last Edited:</p>
+                        <p class="mobile-author-and-review--date-title no-wrap">Clinically Reviewed:</p>
                         <p class="mobile-author-and-review--date no-wrap"><?= $medical_review_date ?></p>
 
 
