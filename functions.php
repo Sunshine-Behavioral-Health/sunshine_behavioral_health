@@ -348,3 +348,21 @@ function acf_link($link, $classes = '')
 	}
 	return '<a class="' . $classes . '" target="' . $target . '" href="' . $link['url'] . '">' . $title . '</a>';
 }
+
+function add_custom_js_file_to_admin($hook)
+{
+	wp_enqueue_script('admin-js', get_template_directory_uri() . '/js/adminJs.js');
+}
+add_action('admin_enqueue_scripts', 'add_custom_js_file_to_admin');
+
+
+if (is_admin()) {
+	function add_custom_css_file_to_admin($hook)
+	{
+		wp_enqueue_style(
+			'admin-styles',
+			get_template_directory_uri() . '/css/admin-styles.css'
+		);
+	}
+	add_action('admin_enqueue_scripts', 'add_custom_css_file_to_admin');
+}

@@ -30,7 +30,6 @@ This theme, like WordPress, is licensed under the GPL.
 @import "scss/forms";
 @import "scss/accessibility";
 @import "scss/spacers";
-@import "scss/other";
 @import "scss/admin-bar";
 @import "scss/grids";
 @import "scss/helper";
@@ -104,6 +103,7 @@ This theme, like WordPress, is licensed under the GPL.
 @import "scss/shortcodes/content_with_border";
 @import "scss/shortcodes/border_content_on_image_cta";
 
+@import "scss/other";
 
 
 // Very bottom css for specificity reasons
